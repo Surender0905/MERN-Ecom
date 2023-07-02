@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
 
 export function LoginForm() {
   return (
@@ -12,13 +13,13 @@ export function LoginForm() {
             </h2>
             <p className="mt-2 text-sm text-gray-600">
               Don&apos;t have an account?{' '}
-              <a
-                href="#"
-                title=""
+              <Link
+                to="/register"
+                title="Sign Up"
                 className="font-semibold text-black transition-all duration-200 hover:underline"
               >
                 Create a free account
-              </a>
+              </Link>
             </p>
             <form action="#" method="POST" className="mt-8">
               <div className="space-y-5">
@@ -47,14 +48,13 @@ export function LoginForm() {
                       {' '}
                       Password{' '}
                     </label>
-                    <a
-                      href="#"
-                      title=""
+                    <Link
+                      to="/register"
                       className="text-sm font-semibold text-black hover:underline"
                     >
                       {' '}
                       Forgot password?{' '}
-                    </a>
+                    </Link>
                   </div>
                   <div className="mt-2">
                     <input
@@ -69,7 +69,7 @@ export function LoginForm() {
                     type="button"
                     className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                   >
-                    Get started <ArrowRight className="ml-2" size={16} />
+                    Get started <ArrowRightIcon className="ml-2  h-5 w-5" />
                   </button>
                 </div>
               </div>
