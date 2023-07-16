@@ -1,5 +1,6 @@
 import { TrashIcon } from '@heroicons/react/24/outline';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const products = [
   {
@@ -47,7 +48,7 @@ export function Cart() {
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Shopping Cart
         </h1>
-        <form className="mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
+        <div className="mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
           <section
             aria-labelledby="cart-heading"
             className="rounded-lg bg-white lg:col-span-8"
@@ -185,8 +186,17 @@ export function Cart() {
                 You will save ₹ 3,431 on this order
               </div>
             </div>
+
+            <div>
+              <Link
+                className="w-100 flex justify-center p-4 bg-blue-700 text-[#ffffff] font-bold hover:bg-sky-500 rounded-md uppercase text-sm"
+                to="/checkout"
+              >
+                CheckOut
+              </Link>
+            </div>
           </section>
-        </form>
+        </div>
       </div>
     </div>
   );
